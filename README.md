@@ -1,8 +1,8 @@
 # prometheus-remote-write-client
 
-A lightweight, production-ready Prometheus **remote_write** metrics client for **push-based** systems.
+A lightweight Prometheus **remote_write** client for **push-based** systems.
 
-Instead of exposing /metrics for Prometheus to scrape like prometheus_client, this client pushes metrics directly to a remote_write endpoint.
+Instead of exposing `/metrics` for Prometheus to scrape like [prometheus_client](https://github.com/prometheus/client_python), this client pushes metrics directly to a remote_write endpoint.
 This makes it suitable for:
 
 - Batch jobs
@@ -21,7 +21,7 @@ This makes it suitable for:
 | **Snappy + Protobuf**   | Fully compatible wire format                              |
 | **Debug Mode**          | Pretty `/metrics`-style output for verification           |
 
-Designed to be **simple, transparent, and deterministic** — no hidden state and no background threads.
+Designed to be **simple, transparent, and deterministic**, with no hidden state and no background threads.
 
 ## Example Usage
 
