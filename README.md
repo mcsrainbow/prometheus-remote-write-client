@@ -27,14 +27,14 @@ Designed to be **simple, transparent, and deterministic**, with no hidden state 
 
 Note: "opentelemetry" refers to Python package `opentelemetry-exporter-prometheus-remote-write`.
 
-| requirement                              | prometheus-client | opentelemetry | this  |
-| ---------------------------------------- | :---------------: | :-----------: | :---: |
-| push without HTTP server                 |         ❌         |       ✅       |   ✅   |
-| on-demand, stateless push with no buffer |         ❌         |       ❌       |   ✅   |
-| full control of timestamps               |         ❌         |       ⚠️       |   ✅   |
-| prometheus-native histogram aggregation  |         ❌         |       ⚠️       |   ✅   |
-| works in cron / short-lived jobs         |         ⚠️         |       ⚠️       |   ✅   |
-| no background threads / hidden state     |         ⚠️         |       ❌       |   ✅   |
+| requirement                              | prometheus-client | opentelemetry | this client |
+| ---------------------------------------- | :---------------: | :-----------: | :---------: |
+| push without HTTP server                 |         ❌         |       ✅       |      ✅      |
+| on-demand, stateless push with no buffer |         ❌         |       ❌       |      ✅      |
+| full control of timestamps               |         ❌         |       ⚠️       |      ✅      |
+| prometheus-native histogram aggregation  |         ❌         |       ⚠️       |      ✅      |
+| works in cron / short-lived jobs         |         ⚠️         |       ⚠️       |      ✅      |
+| no background threads / hidden state     |         ⚠️         |       ❌       |      ✅      |
 
 ## Example Usage
 
