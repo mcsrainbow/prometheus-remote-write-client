@@ -1,0 +1,12 @@
+[project]
+name = "prometheus-remote-write-client"
+version = "0.1.0"
+description = "A lightweight Prometheus remote_write metrics client for push-based systems."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "requests>=2.31,<3",
+  "urllib3>=2,<3",
+  "protobuf>=3.20,<6",
+  "python-snappy>=0.6.1"
+]
