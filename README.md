@@ -25,16 +25,16 @@ Designed to be **simple, transparent, and deterministic**, with no hidden state 
 
 ## Why Not `prometheus-client` or `opentelemetry`?
 
-Note: "opentelemetry" refers to Python package `opentelemetry-exporter-prometheus_remote_write`.
+Note: "opentelemetry" refers to Python package `opentelemetry-exporter-prometheus-remote-write`.
 
-| Requirement                                           | prometheus-client | opentelemetry | This Client |
-| ----------------------------------------------------- | :---------------: | :-----------: | :---------: |
-| Push without HTTP server                              |         ❌         |       ✅       |      ✅      |
-| On-demand, stateless push (no internal buffers)       |         ❌         |       ❌       |      ✅      |
-| Full control of timestamps                            |         ❌         |       ⚠️       |      ✅      |
-| Prometheus-native histogram aggregation (transparent) |         ❌         |       ⚠️       |      ✅      |
-| Works in cron / short-lived jobs without pitfalls     |         ⚠️         |       ⚠️       |      ✅      |
-| No background threads / hidden state                  |         ⚠️         |       ❌       |      ✅      |
+| requirement                              | prometheus-client | opentelemetry | this  |
+| ---------------------------------------- | :---------------: | :-----------: | :---: |
+| push without HTTP server                 |         ❌         |       ✅       |   ✅   |
+| on-demand, stateless push with no buffer |         ❌         |       ❌       |   ✅   |
+| full control of timestamps               |         ❌         |       ⚠️       |   ✅   |
+| prometheus-native histogram aggregation  |         ❌         |       ⚠️       |   ✅   |
+| works in cron / short-lived jobs         |         ⚠️         |       ⚠️       |   ✅   |
+| no background threads / hidden state     |         ⚠️         |       ❌       |   ✅   |
 
 ## Example Usage
 
