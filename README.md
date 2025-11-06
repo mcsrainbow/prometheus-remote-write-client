@@ -23,6 +23,15 @@ This makes it suitable for:
 
 Designed to be **simple, transparent, and deterministic**, with no hidden state and no background threads.
 
+## Why Not `prometheus_client`?
+
+| Requirement                       | prometheus_client | This Client |
+| --------------------------------- | :---------------: | :---------: |
+| Push without HTTP server          |         ❌         |      ✅      |
+| Full control of timestamps        |         ❌         |      ✅      |
+| Transparent histogram aggregation |         ❌         |      ✅      |
+| Works in cron / short-lived jobs  |         ⚠️         |      ✅      |
+
 ## Example Usage
 
 ```python
@@ -94,21 +103,3 @@ billing_job_duration_seconds_bucket{worker="billing-worker-02",le="+Inf"} 3
 billing_job_duration_seconds_count{worker="billing-worker-02"} 3
 billing_job_duration_seconds_sum{worker="billing-worker-02"} 10.4
 ```
-
-## Works With
-
-| Backend                | Status |
-| ---------------------- | ------ |
-| Prometheus             | ✅      |
-| VictoriaMetrics        | ✅      |
-| Thanos Receive         | ✅      |
-| Grafana Mimir / Cortex | ✅      |
-
-## Why Not `prometheus_client`?
-
-| Requirement                       | prometheus_client | This Client |
-| --------------------------------- | :---------------: | :---------: |
-| Push without HTTP server          |         ❌         |      ✅      |
-| Full control of timestamps        |         ❌         |      ✅      |
-| Transparent histogram aggregation |         ❌         |      ✅      |
-| Works in cron / short-lived jobs  |         ⚠️         |      ✅      |
