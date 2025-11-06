@@ -1,7 +1,7 @@
 [project]
 name = "prometheus-remote-write-client"
 version = "0.1.0"
-description = "A lightweight Prometheus remote_write metrics client for push-based systems."
+description = "A lightweight Prometheus remote_write client for push-based systems."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
