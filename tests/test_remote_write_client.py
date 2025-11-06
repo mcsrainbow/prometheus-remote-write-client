@@ -4,7 +4,7 @@ import snappy
 import pytest
 import requests
 
-import remote_write_client as rwc
+import prometheus_remote_write_client as rwc
 
 def decode_wr_from_snappy(data):
     """Decompress snappy payload and parse WriteRequest using the same dynamic schema."""
