@@ -23,14 +23,16 @@ This makes it suitable for:
 
 Designed to be **simple, transparent, and deterministic**, with no hidden state and no background threads.
 
-## Why Not `prometheus_client`?
+## Why Not `prometheus_client` or `opentelemetry-exporter-prometheus-remote-write`?
 
-| Requirement                       | prometheus_client | This Client |
-| --------------------------------- | :---------------: | :---------: |
-| Push without HTTP server          |         ❌         |      ✅      |
-| Full control of timestamps        |         ❌         |      ✅      |
-| Transparent histogram aggregation |         ❌         |      ✅      |
-| Works in cron / short-lived jobs  |         ⚠️         |      ✅      |
+| Requirement                                           | prometheus_client | opentelemetry-exporter-prometheus-remote-write | This Client |
+| ----------------------------------------------------- | :---------------: | :--------------------------------------------: | :---------: |
+| Push without HTTP server                              |         ❌         |                       ✅                        |      ✅      |
+| On-demand, stateless push (no internal buffers)       |         ❌         |                       ❌                        |      ✅      |
+| Full control of timestamps                            |         ❌         |                       ⚠️                        |      ✅      |
+| Prometheus-native histogram aggregation (transparent) |         ❌         |                       ⚠️                        |      ✅      |
+| Works in cron / short-lived jobs without pitfalls     |         ⚠️         |                       ⚠️                        |      ✅      |
+| No background threads / hidden state                  |         ⚠️         |                       ❌                        |      ✅      |
 
 ## Example Usage
 
