@@ -12,14 +12,14 @@ This makes it suitable for:
 
 ## Features
 
-| Capability              | Description                                               |
-| ----------------------- | --------------------------------------------------------- |
-| **remote_write native** | No HTTP exporter required                                 |
-| **Counters**            | Maintains monotonicity (`*_total`)                        |
-| **Gauges**              | Arbitrary numeric values                                  |
-| **Histograms**          | Local bucket aggregation with `_bucket`, `_sum`, `_count` |
-| **Snappy + Protobuf**   | Fully compatible wire format                              |
-| **Debug Mode**          | `/metrics`-style output for verification                  |
+| Capability              | Description                                        |
+| ----------------------- | -------------------------------------------------- |
+| **remote_write native** | Direct push without HTTP server                    |
+| **Counters**            | Monotonic (`*_total`)                              |
+| **Gauges**              | Arbitrary numbers                                  |
+| **Histograms**          | Local aggregation with `_bucket`, `_sum`, `_count` |
+| **Snappy + Protobuf**   | Prometheus wire compatible                         |
+| **Debug Mode**          | `/metrics`-style output for verification           |
 
 Designed to be **simple, transparent, and deterministic**, with no hidden state and no background threads.
 
