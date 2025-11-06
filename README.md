@@ -2,7 +2,7 @@
 
 A lightweight Prometheus **remote_write** client for **push-based** systems.
 
-Instead of exposing `/metrics` for Prometheus to scrape like [prometheus_client](https://github.com/prometheus/client_python), this client pushes metrics directly to a remote_write endpoint.
+Instead of exposing `/metrics` for Prometheus to scrape like [prometheus-client](https://github.com/prometheus/client_python), this client pushes metrics directly to a remote_write endpoint.
 This makes it suitable for:
 
 - Batch jobs
@@ -23,16 +23,18 @@ This makes it suitable for:
 
 Designed to be **simple, transparent, and deterministic**, with no hidden state and no background threads.
 
-## Why Not `prometheus_client` or `opentelemetry-exporter-prometheus-remote-write`?
+## Why Not `prometheus-client` or `opentelemetry`?
 
-| Requirement                                           | prometheus_client | opentelemetry-exporter-prometheus-remote-write | This Client |
-| ----------------------------------------------------- | :---------------: | :--------------------------------------------: | :---------: |
-| Push without HTTP server                              |         ❌         |                       ✅                        |      ✅      |
-| On-demand, stateless push (no internal buffers)       |         ❌         |                       ❌                        |      ✅      |
-| Full control of timestamps                            |         ❌         |                       ⚠️                        |      ✅      |
-| Prometheus-native histogram aggregation (transparent) |         ❌         |                       ⚠️                        |      ✅      |
-| Works in cron / short-lived jobs without pitfalls     |         ⚠️         |                       ⚠️                        |      ✅      |
-| No background threads / hidden state                  |         ⚠️         |                       ❌                        |      ✅      |
+Note: "opentelemetry" refers to Python package `opentelemetry-exporter-prometheus_remote_write`.
+
+| Requirement                                           | prometheus-client | opentelemetry | This Client |
+| ----------------------------------------------------- | :---------------: | :-----------: | :---------: |
+| Push without HTTP server                              |         ❌         |       ✅       |      ✅      |
+| On-demand, stateless push (no internal buffers)       |         ❌         |       ❌       |      ✅      |
+| Full control of timestamps                            |         ❌         |       ⚠️       |      ✅      |
+| Prometheus-native histogram aggregation (transparent) |         ❌         |       ⚠️       |      ✅      |
+| Works in cron / short-lived jobs without pitfalls     |         ⚠️         |       ⚠️       |      ✅      |
+| No background threads / hidden state                  |         ⚠️         |       ❌       |      ✅      |
 
 ## Example Usage
 
