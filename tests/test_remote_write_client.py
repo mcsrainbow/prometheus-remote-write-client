@@ -6,7 +6,6 @@ import requests
 
 import remote_write_client as rwc
 
-
 def decode_wr_from_snappy(data):
     """Decompress snappy payload and parse WriteRequest using the same dynamic schema."""
     Label, Sample, TimeSeries, WriteRequest = rwc._init_schema()
@@ -49,11 +48,11 @@ def get_metric_and_labels(ts):
     """Extract metric name (__name__) and label dict from a TimeSeries."""
     metric = None
     labels = {}
-    for l in ts.labels:
-        if l.name == "__name__":
-            metric = l.value
+    for lable in ts.labels:
+        if lable.name == "__name__":
+            metric = lable.value
         else:
-            labels[l.name] = l.value
+            labels[lable.name] = lable.value
     return metric, labels
 
 

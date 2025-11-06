@@ -226,11 +226,11 @@ class RemoteWriteClient:
         """
         metric = None
         labels = {}
-        for l in ts.labels:
-            if l.name == "__name__":
-                metric = l.value
+        for lable in ts.labels:
+            if lable.name == "__name__":
+                metric = lable.value
             else:
-                labels[l.name] = l.value
+                labels[lable.name] = lable.value
         return metric, labels
 
     def _is_histo(self, metric: str) -> bool:
