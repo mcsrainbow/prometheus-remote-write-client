@@ -18,7 +18,7 @@ This makes it suitable for:
 | **counter**             | monotonic (`*_total`)                              |
 | **gauge**               | arbitrary numbers                                  |
 | **histogram**           | local aggregation with `_bucket`, `_sum`, `_count` |
-| **snappy + protobuf**   | Prometheus wire compatible                         |
+| **snappy + protobuf**   | prometheus wire compatible                         |
 | **debug mode**          | `/metrics`-style output for verification           |
 
 Designed to be **simple, transparent, and deterministic**, with no hidden state and no background threads.
