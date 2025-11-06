@@ -19,7 +19,7 @@ This makes it suitable for:
 | **Gauges**              | Arbitrary numeric values                                  |
 | **Histograms**          | Local bucket aggregation with `_bucket`, `_sum`, `_count` |
 | **Snappy + Protobuf**   | Fully compatible wire format                              |
-| **Debug Mode**          | Pretty `/metrics`-style output for verification           |
+| **Debug Mode**          | `/metrics`-style output for verification                  |
 
 Designed to be **simple, transparent, and deterministic**, with no hidden state and no background threads.
 
