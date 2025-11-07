@@ -511,7 +511,7 @@ if __name__ == "__main__":
     # Counter
     cli.counter_inc("billing_orders", 85)
 
-    # Gauges
+    # Gauge
     cli.gauge_set("billing_queue_depth", 36, {"queue": "payments"})
     cli.gauge_set("billing_queue_depth", 5,  {"queue": "refunds"})
     cli.gauge_set("billing_queue_depth", 0,  {"queue": "dlq"})
