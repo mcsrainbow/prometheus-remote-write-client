@@ -111,4 +111,4 @@ billing_job_duration_seconds_sum{worker="billing-worker-02"} 10.4
 ## Why Not Use Prometheus?
 
 Prometheus is pull-based and doesn’t accept pushed metrics, so building a client to send metrics via remote_write is a workaround hack.  
-For cases where metrics need to be pushed on demand, [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) accepts individual metrics directly via curl, which is more straightforward in practice.
+For cases where metrics need to be pushed on demand, [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) accepts individual metrics directly sent by curl, which is more straightforward in practice.
