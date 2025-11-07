@@ -6,7 +6,6 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
   "requests>=2.31,<3",
-  "urllib3>=2,<3",
   "protobuf>=3.20,<6",
   "python-snappy>=0.6.1"
 ]
